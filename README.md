@@ -1,6 +1,6 @@
-- 👋 Salam, I’m Usman
-- 👀 I’m interested in web development and cyber security
-- 🌱 I’m currently enrolled in BCS
+-Salam, myself Usman
+-I am self taught developer currently enrolled in BCS
+-Cyber security aspirant
 - 📫 contact me on gmail : usmanmubashir402@gmail.com
 
 <!---
