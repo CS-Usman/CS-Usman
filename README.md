@@ -1,6 +1,6 @@
 -Salam, myself Usman</br>
--I am self taught developer currently enrolled in BCS</br>
--Cyber security aspirant</br>
+-I am self taught developer currently undergrad</br>
+-Interest : Full stack web development, Web 3.0, Cyber Security 
 -Contact me : usmanmubashir402@gmail.com
 
 <!---
