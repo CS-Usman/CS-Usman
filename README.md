@@ -1,6 +1,6 @@
 -Salam, myself Usman</br>
 -I am self taught developer currently undergrad</br>
--Interest : Full stack web development, Web 3.0, Cyber Security 
+-Interest : Full stack web development, Web 3.0, Cyber Security</br>
 -Contact me : usmanmubashir402@gmail.com
 
 <!---
