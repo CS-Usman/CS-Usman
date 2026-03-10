@@ -13,23 +13,10 @@
 
 ![Odoo](https://img.shields.io/badge/Odoo-714B67?style=for-the-badge&logo=odoo&logoColor=white)
 ![v10→v18](https://img.shields.io/badge/v10_→_v18-End--to--End_ERP-9B4F8E?style=for-the-badge)
-![Silverdale](https://img.shields.io/badge/Silverdale_Tech-Developer-4a1942?style=for-the-badge)
+![Hamdek](https://img.shields.io/badge/Hamdek-Odoo_Developer-4a1942?style=for-the-badge)
 ![Clients](https://img.shields.io/badge/Clients-SMB_→_Enterprise-2D0A4E?style=for-the-badge)
 
 </div>
-
----
-
-```python
-{
-  "role"      : "Odoo Developer @ Silverdale Tech",
-  "versions"  : "v10 → v18  |  end-to-end ERP delivery",
-  "clients"   : "small businesses → enterprise deployments",
-  "stack"     : ["Python", "OWL.js", "QWeb", "PostgreSQL", "Linux", "Odoo.sh", "AWS"],
-  "currently" : "migrating enterprise modules from v10 → v18",
-  "mindset"   : "if a business process exists, it can be automated in Odoo"
-}
-```
 
 ---
 
