@@ -58,6 +58,7 @@
 
 </div>
 
+---
 
 ## What I Do
 
@@ -76,7 +77,6 @@
 - Odoo.sh branch management: dev → staging → production with CI/CD flows
 - AWS S3 for filestore + Lambda for serverless business logic triggers
 - Log analysis, crash dumps, memory leak diagnosis, failed cron recovery
-- PowerShell + Bash scripting for Windows Odoo server monitoring
 
 ---
 
@@ -89,11 +89,8 @@
 
 - Custom modules from scratch — models, views, wizards, security rules, menus
 - Migrate custom and third-party modules across v10 → v14 → v16 → v17 → v18
-- Deprecated API rewrites, OWL.js frontend adaptation, QWeb syntax updates per version
 - `_inherit` / `_inherits` / extension views — zero core source edits
-- Server actions, automated actions, scheduled crons for business automation
-- Record rules, access rights, multi-company security models
-- Wizards, transient models, onchange/compute chains
+- Server actions, automated actions, scheduled crons, record rules, multi-company security
 
 ---
 
@@ -104,11 +101,8 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 - Custom QWeb report templates — invoices, delivery slips, production orders, POS receipts
-- Analytical dashboards using graph / pivot / cohort views + custom JS chart components
-- OWL components for live KPI widgets and interactive drill-down charts
-- Print layout mastery — page breaks, headers/footers, multi-language, paper size configs
-- Embedded BPMN workflow diagrams inside Odoo for SOP visualization
-- ShopFloor real-time production tracking with live work order status boards
+- Analytical dashboards — graph / pivot / cohort views, OWL KPI widgets, custom JS charts
+- Embedded BPMN workflow diagrams, ShopFloor live production tracking boards
 
 ---
 
@@ -120,11 +114,8 @@
 ![Deema](https://img.shields.io/badge/Deema_Pay-DAA520?style=flat-square)
 
 - Rebuilt entire Odoo POS frontend in OWL.js — custom screens, order flows, table management, split billing
-- Stripe (online) + Stripe Terminal (in-person hardware) integrated end-to-end into POS
-- Hesabe & Deema — full API flow, webhook handling, failure recovery, Odoo reconciliation
-- POS membership and subscription module built from scratch — card scanning, member-only pricing
-- Offline mode — IndexedDB order queuing, sync-on-reconnect, session state recovery
-- Cashier shift reports, hourly sales heatmaps, end-of-day reconciliation in QWeb
+- Integrated Stripe, Stripe Terminal, Hesabe & Deema end-to-end — webhook handling, failure recovery, reconciliation
+- POS membership module from scratch, offline mode with IndexedDB queuing and sync-on-reconnect
 
 ---
 
@@ -136,87 +127,23 @@
 
 - SFTP-based EDI — automated exchange of orders, invoices, ASNs with trading partners
 - External REST APIs — bidirectional sync between Odoo and third-party platforms
-- AWS Lambda event-driven triggers for real-time Odoo record updates
-- BPMN workflow diagrams embedded in Odoo for visual SOP management
-- Custom email templates, automated follow-ups, scheduled report delivery via cron
+- AWS Lambda event-driven triggers, BPMN diagrams, automated follow-ups and scheduled reports
 
 ---
 
-## Odoo Modules — What I Actually Built
+## 📦 Odoo Modules
 
-### 🔴 CRM
-| Area | What I Built |
+| Module | Key Work |
 |---|---|
-| **Architecture** | Multi-stage pipelines with custom probability rules and automated stage transitions based on activity deadlines |
-| **Automation** | Lead auto-assignment by region/product, inactivity follow-ups, stale deal escalation to managers via cron |
-| **Custom Logic** | Computed fields for deal scoring, close date warnings, customer LTV from `sale.order` history via ORM aggregation |
-| **Reporting** | OWL dashboard — conversion rates, avg deal size, win/loss analysis, funnel velocity per rep |
-| **Integration** | REST API lead intake with UTM tracking, source attribution, duplicate detection on import |
+| 🔴 **CRM** | Custom pipelines, lead auto-assignment, deal scoring computed fields, OWL conversion dashboards |
+| 🔵 **Sales** | Multi-tier pricelist engine, approval routing chains, sales target module built from scratch |
+| 🟢 **Accounting** | Invoice automation, multi-currency with revaluation journals, custom P&L and reconciliation rules |
+| 🟣 **Inventory** | Multi-step routing, bin management module, dynamic replenishment rules, WMS REST sync |
+| 🟠 **Manufacturing** | Multi-level BOMs, workcenter routing, MRP scheduling, OEE dashboards, ShopFloor tablet UI |
+| 🔶 **POS** | Full OWL.js rebuild, 4 payment gateways, membership module, offline mode, QWeb shift reports |
+| 🩵 **Project** | Stage automation, timesheet approval workflows, client portal, billable hour auto-invoicing |
+| 🔷 **Real Estate** | Full custom module — listings, installment engine, document generation, customer portal |
 
-### 🔵 Sales
-| Area | What I Built |
-|---|---|
-| **Pricing Engine** | Multi-tiered pricelist logic — customer-segment discounts, volume breaks, currency-specific rules per category |
-| **Approval Workflows** | Multi-level manager routing for high-value orders — threshold triggers, escalation chains, order lock on pending |
-| **Custom Module** | Sales target tracking from scratch — monthly quotas per rep, real-time progress bars, variance alerts |
-| **Payment Flow** | Auto invoice generation, stock reservation, and delivery scheduling on confirmed payment receipt |
-| **Reporting** | Per-brand QWeb order confirmations, commission reports, revenue vs target dashboards |
-
-### 🟢 Accounting
-| Area | What I Built |
-|---|---|
-| **Invoice Automation** | Auto invoice generation on delivery, subscription renewal, and project milestone completion |
-| **Multi-Currency** | Live exchange rate integration, revaluation journals, automated gain/loss posting on period close |
-| **Custom Reports** | Client-specific P&L, balance sheet, aged receivables in QWeb — formatted to local regulatory standards |
-| **Reconciliation** | Bank statement rules matching payments by reference, amount, partner — exception flagging for unmatched |
-| **Tax & Localization** | Withholding tax logic, tax group configs, fiscal position mapping for multi-country deployments |
-
-### 🟣 Inventory
-| Area | What I Built |
-|---|---|
-| **Stock Move Logic** | Multi-step routing — goods-in → inspection → quarantine → bin putaway with quality check triggers |
-| **Custom Module** | Warehouse bin management — barcode scanning, FIFO/FEFO enforcement, real-time capacity per location |
-| **Replenishment** | Dynamic min/max reorder rules from avg daily consumption and supplier lead times — auto-generating RFQs |
-| **Reporting** | Daily stock valuation, slow-moving alerts, expiry tracking — delivered via scheduled actions |
-| **WMS Integration** | Bidirectional REST API sync with external WMS on every confirmed pick/pack/ship |
-
-### 🟠 Manufacturing & ShopFloor
-| Area | What I Built |
-|---|---|
-| **BOM Engineering** | Multi-level BOMs with byproduct tracking, scrap variance recording, version control for engineering changes |
-| **Work Order Routing** | Workcenter routing with capacity planning, operator skill matching, auto-splitting across shifts |
-| **ShopFloor UI** | Tablet views — touch component scanning, quality check gates, rework routing, real-time production feedback |
-| **MRP Automation** | Auto MO from sales orders — MRP scheduling, capacity conflict detection, auto-rescheduling on delays |
-| **OEE Reporting** | Planned vs actual, scrap rate by workcenter, OEE metrics, end-of-shift summaries for factory managers |
-
-### 🔶 POS
-| Area | What I Built |
-|---|---|
-| **Full POS Rebuild** | Entire POS frontend in OWL.js — custom screens, order flows, table management, split billing, kitchen display |
-| **Payment Gateways** | Stripe, Stripe Terminal, Hesabe, Deema — pairing, capture, failure recovery, full Odoo reconciliation |
-| **Memberships** | POS membership module from scratch — plan selection, card scanning, renewals, member-only pricing |
-| **Session Reports** | Shift reports, hourly heatmaps, product mix, payment breakdowns, end-of-day reconciliation in QWeb |
-| **Offline Mode** | IndexedDB order queuing, sync-on-reconnect, session state recovery after network failure |
-
-### 🩵 Project
-| Area | What I Built |
-|---|---|
-| **Stage Automation** | Auto task assignment on stage entry, client status emails, stage lock on incomplete dependencies |
-| **Timesheet Logic** | Manager approval gates, overtime flagging, billable caps, auto invoice from approved timesheets |
-| **Client Portal** | Filtered task visibility, milestone progress, document sharing, client sign-off on deliverables |
-| **Reporting** | Budget vs actual hours, completion rates, overdue escalation, per-employee utilization in QWeb |
-| **Mobile UI** | Alphabetical filtering sidebar, responsive kanban cards, touch-optimized quick actions |
-
-### 🔷 Real Estate
-| Area | What I Built |
-|---|---|
-| **Full Custom Module** | Complete real estate module from scratch — listings, unit types, floor plans, availability, lead-to-contract pipeline |
-| **Installment Engine** | Configurable payment schedule builder, auto invoice per milestone, late payment penalty calculation |
-| **Document Generation** | Auto-generated sale agreements, NOC letters, handover checklists from property and customer records |
-| **Customer Portal** | Owned units, payment history, balances, downloadable statements — scoped securely per customer login |
-| **Management Reports** | Occupancy dashboards, revenue per property, pipeline by unit type, broker commission tracking |
-
----
 
 
 
