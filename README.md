@@ -45,7 +45,7 @@
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![Odoo.sh](https://img.shields.io/badge/Odoo.sh-714B67?style=for-the-badge&logo=odoo&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS_S3_Lambda-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS_-232F3E?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 
@@ -75,7 +75,7 @@
 - Nginx reverse proxy — SSL termination, upstream config, 504 timeout resolution
 - PostgreSQL — backups, vacuuming, performance tuning, connection pooling
 - Odoo.sh branch management: dev → staging → production with CI/CD flows
-- AWS S3 for filestore + Lambda for serverless business logic triggers
+- AWS S3 for filesto@re + Lambda for serverless business logic triggers
 - Log analysis, crash dumps, memory leak diagnosis, failed cron recovery
 
 ---
